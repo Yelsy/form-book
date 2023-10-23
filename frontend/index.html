@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="shortcut icon" href="https://intranet.hbtn.io/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <img src="https://intranet.hbtn.io/favicon.ico" class="icon">
+    <main>
+      <h1>Holbbie Food</h1>
+      <p>Reserve your table by filling out the following form</p>
+
+      <div class="form-container">
+        <form>
+            <div>
+                <label for="">
+                    Full name:
+                  <input type="text" name="name-user" placeholder="your name" id="name-input">
+                </label>
+            </div>
+            <div class="number-dni">
+                <label for="">
+                  DNI:
+                  <input type="number" name="dni-user" placeholder="12345678" id="dni-input">
+                </label>
+            </div>
+            <div>
+                <label for="">
+                    Email or phone:
+                  <input type="text" pattern="/^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/" id="correo">
+                </label>
+            </div>
+            <div class="number-people">
+                <label for="">
+                    Amount of people:
+                    <input type="number" name="number-of-people" id="people-input">
+                  </label>
+            </div>
+            <div>
+                <label for="">
+                    Add some description  
+                  <textarea type="text" name="user-message" id="message-input"></textarea>
+                </label>
+
+            </div>
+          <button type="submit">
+            Reserve now
+          </button>
+        </form>
+
+        <div class="form-img">
+          <img src="">
+        </div>
+      </div>  <!-- eso to a guardar la preguntas y la imagen -->
+      <div>
+    </main>
+  </body>
+</html>
