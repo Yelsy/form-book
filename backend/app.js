@@ -35,16 +35,16 @@ app.get('/booked', (request, response) => {
 });
 
 app.post('/users', (request, response) => {
-    const { name, dni, email, phone, total, message } = request.body;
+    const { name, dni, email, phone, total, description } = request.body;
 
     console.log(request);
-    connection.query('INSERT INTO users (name, dni, email, phone, total, message) VALUES (?, ?, ?, ?, ?, ?)', 
-        [name, dni, email, phone, total, message], (error) => {
+    connection.query('INSERT INTO data_book (name, dni, email, phone, total, description) VALUES (?, ?, ?, ?, ?, ?)', 
+        [name, dni, email, phone, total, description], (error) => {
       if (error) {
         console.error(error);
-        response.status(500).send('Error creating user');
+        response.status(500).send('Error creating book');
       } else {
-        response.send('User created successfully');
+        response.send('Booking created successfully');
       }
     });
   });
